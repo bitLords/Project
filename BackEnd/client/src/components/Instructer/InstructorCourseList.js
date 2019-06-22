@@ -10,12 +10,12 @@ const Course = props => (
         <td>{props.course.available_year}</td>
         <td>{props.course.course_credit}</td>
         <td>
-            <Link to={"/edit/"+props.course._id} className="btn btn-primary" >Edit</Link>
+            <Link to={"/edit/"+props.course._id} class="btn btn-primary" >Edit</Link>
         </td>
     </tr>
 )
 
-export default class ListCourse extends Component {
+export default class InstructorCourseList extends Component {
 
     constructor(props) {
         super(props);
