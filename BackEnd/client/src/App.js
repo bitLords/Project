@@ -7,6 +7,10 @@ import Login from './components/UserRegistration/Login'
 import Register from './components/UserRegistration/Register'
 import StudentProfile from './components/Student/StudentProfile'
 import InstructerProfile from './components/Instructer/InstructerProfile'
+import AddCourse from './components/Course/AddCourse'
+import ListCourse from './components/Course/ListCourse'
+import EditCourse from './components/Course/EditCourse'
+
 
 class App extends Component {
   render () {
@@ -20,6 +24,9 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/studentprofile" component={StudentProfile} />
             <Route exact path="/instructorprofile" component={InstructerProfile} />
+            <Route exact path="/course/add" component={AddCourse} />
+            <Route exact path="/course/list" component={ListCourse} />
+            <Route exact path="/edit/:id" component={EditCourse} />
           </div>
         </div>
       </Router>
