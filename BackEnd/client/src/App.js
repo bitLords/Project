@@ -6,6 +6,9 @@ import Landing from './components/UserRegistration/Landing'
 import Login from './components/UserRegistration/Login'
 import Register from './components/UserRegistration/Register'
 import Profile from './components/UserRegistration/Profile'
+import AddCourse from './components/Course/AddCourse'
+import ListCourse from './components/Course/ListCourse'
+import EditCourse from './components/Course/EditCourse'
 
 class App extends Component {
   render () {
@@ -18,6 +21,9 @@ class App extends Component {
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/profile" component={Profile} />
+            <Route exact path="/course/add" component={AddCourse} />
+            <Route exact path="/course/list" component={ListCourse} />
+            <Route exact path="/edit/:id" component={EditCourse} />
           </div>
         </div>
       </Router>
