@@ -12,6 +12,9 @@ const Course = props => (
         <td>
             <Link to={"/edit/"+props.course._id} class="btn btn-primary" >Edit</Link>
         </td>
+        <td>
+            <Link to={"/delete/"+props.course._id} className="btn btn-danger" onClick={InstructorCourseList.deleteCourse}>Delete</Link>
+        </td>
     </tr>
 )
 
@@ -57,6 +60,16 @@ export default class InstructorCourseList extends Component {
         return this.state.courses.map(function(currentCourse, i){
             return <Course course={currentCourse} key={i} />;
         })
+    }
+
+    deleteCourse(){
+        axios.get('http://localhost:5000/course/delete/'+this.props.match.params.id)   
+           .then(data=> {
+               console.log('Deleted')
+            })         
+            .catch(function (error) {
+                console.log(error);
+            })
     }
 
 

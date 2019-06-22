@@ -50,4 +50,19 @@ router.route('/add').post(function(req, res) {
         });
 })
 
+router.route('/delete/:id').delete(function(req, res) {
+    course.findById(req.params.id, function(err, todo) {
+        if (!todo)
+            res.status(404).send("Data is not found");
+        else     
+
+        todo.delete().then(todo => {
+            res.json('Course Deleted!');
+        })
+            .catch(err => {
+                res.status(400).send("Delete not possible");
+            });
+    });
+});
+
 module.exports = router;
