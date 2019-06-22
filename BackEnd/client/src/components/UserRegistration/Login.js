@@ -25,9 +25,19 @@ class Login extends Component {
         }
 
         login(user).then(res => {
-            if (res) {
-                this.props.history.push('/profile')
+            if(user.stuNumber == "IT1711"){
+                if (res) {
+                    this.props.history.push('/instructorprofile')
+                    console.log(user.stuNumber);
+                }
             }
+            else{
+                if (res) {
+                    this.props.history.push('/studentprofile')
+                    console.log(user.stuNumber);
+                }
+            }
+
         })
     }
 
