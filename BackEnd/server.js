@@ -28,12 +28,14 @@ var Users = require('./routes/Users')
 var Courses = require('./routes/CourseRoutes')
 var StudentInfo = require('./routes/StudentInfoRoutes')
 var InstructorInfo = require('./routes/InstructorInfoRoutes')
+var Assignments = require('./routes/AssignmentRoutes')
 
 
 app.use('/users', Users)
 app.use('/course', Courses)
 app.use('/studentInfo', StudentInfo)
 app.use('/instructorInfo', InstructorInfo)
+app.use('/assignment',Assignments)
 
 app.listen(port, () =>{
     console.log("Server is running on port: "+ port)

@@ -25,7 +25,7 @@ class Login extends Component {
         }
 
         login(user).then(res => {
-            if(user.stuNumber == "IT1711"){
+            if(user.stuNumber === "IT1711"){
                 if (res) {
                     this.props.history.push('/instructorprofile')
                     console.log(user.stuNumber);
