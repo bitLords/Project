@@ -15,7 +15,7 @@ const Course = props => (
     </tr>
 )
 
-export default class ListCourse extends Component {
+export default class StudentCourseList extends Component {
 
     constructor(props) {
         super(props);
@@ -35,7 +35,7 @@ export default class ListCourse extends Component {
 
     //For instant Refresh after update
     componentDidUpdate() {
-        axios.get('http://localhost:5000/course/'+this.props.match.params.id)
+        axios.get('http://localhost:5000/course/getAll'+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     

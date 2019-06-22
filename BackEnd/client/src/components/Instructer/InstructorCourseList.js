@@ -10,12 +10,12 @@ const Course = props => (
         <td>{props.course.available_year}</td>
         <td>{props.course.course_credit}</td>
         <td>
-            <Link to={"/edit/"+props.course._id} class="btn btn-primary disabled" >Edit</Link>
+            <Link to={"/edit/"+props.course._id} class="btn btn-primary" >Edit</Link>
         </td>
     </tr>
 )
 
-export default class ListCourse extends Component {
+export default class InstructorCourseList extends Component {
 
     constructor(props) {
         super(props);
@@ -35,7 +35,7 @@ export default class ListCourse extends Component {
 
     //For instant Refresh after update
     componentDidUpdate() {
-        axios.get('http://localhost:5000/course/'+this.props.match.params.id)
+        axios.get('http://localhost:5000/course/getAll'+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     
