@@ -11,6 +11,9 @@ const Course = props => (
         <td>{props.course.course_credit}</td>
         <td>
             <Link to={"/edit/"+props.course._id} class="btn btn-primary disabled" >Edit</Link>
+        </td>           
+        <td>
+            <Link to={"/delete/"+props.course._id} className="btn btn-danger disabled" >Delete</Link>
         </td>
     </tr>
 )

@@ -33,6 +33,7 @@ class App extends Component {
             <Route exact path="/course/add" component={AddCourse} />
             <Route exact path="/course/list" component={ListCourse} />
             <Route exact path="/edit/:id" component={EditCourse} />
+            <Route exact path="/delete/:id" component={ListCourse} />
             <Route exact path="/student/courseList" component={StudentCourseList} />
             <Route exact path="/assignment/list" component={ListAssignment} />
             <Route exact path="/assignment/add" component={AddAssignment} />
