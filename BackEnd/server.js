@@ -17,7 +17,7 @@ app.use(
     })
 )
 
-const mongoURI = 'mongodb://localhost:27071/afreactDB'
+const mongoURI = 'mongodb://localhost:27017/afreactDB'
 
 mongoose
     .connect(mongoURI,{useNewUrlParser: true})
@@ -26,7 +26,7 @@ mongoose
 
 var Users = require('./routes/Users')
 
-app.use('Users', Users)
+app.use('/users', Users)
 
 app.listen(port, () =>{
     console.log("Server is running on port: "+ port)
