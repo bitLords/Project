@@ -11,6 +11,7 @@ import AddCourse from './components/Course/AddCourse'
 import ListCourse from './components/Course/ListCourse'
 import EditCourse from './components/Course/EditCourse'
 import StudentCourseList from './components/Student/StudentCourseList'
+import InstructorCourseList from './components/Instructer/InstructorCourseList'
 
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
             <Route exact path="/course/list" component={ListCourse} />
             <Route exact path="/edit/:id" component={EditCourse} />
             <Route exact path="/student/courseList" component={StudentCourseList} />
+            <Route exact path="/instructor/courseList" component={InstructorCourseList} />
           </div>
         </div>
       </Router>
