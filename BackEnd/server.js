@@ -25,10 +25,10 @@ mongoose
     .catch(err => console.log(err))
 
 var Users = require('./routes/Users')
-var Courses = require('./routes/CourseRoutes')
+//var Courses = require('./routes/CourseRoutes')
 
 app.use('/users', Users)
-app.use('/course', Courses)
+//app.use('/course', Courses)
 
 app.listen(port, () =>{
     console.log("Server is running on port: "+ port)

@@ -1,4 +1,4 @@
-const express = require('express');
+/*const express = require('express');
 const router = express.Router();
 const course = require('../models/Course');
 
@@ -48,4 +48,4 @@ router.route('/add').post(function(req, res) {
         .catch(err => {
             res.status(400).send('Adding new Course failed');
         });
-});
+});*/
