@@ -5,11 +5,13 @@ import Navbar from './components/UserRegistration/Navbar'
 import Landing from './components/UserRegistration/Landing'
 import Login from './components/UserRegistration/Login'
 import Register from './components/UserRegistration/Register'
-import Profile from './components/UserRegistration/Profile'
+import StudentProfile from './components/Student/StudentProfile'
+import InstructerProfile from './components/Instructer/InstructerProfile'
 import AddCourse from './components/Course/AddCourse'
 import ListCourse from './components/Course/ListCourse'
 import EditCourse from './components/Course/EditCourse'
 import StudentCourseList from './components/Student/StudentCourseList'
+
 
 class App extends Component {
   render () {
@@ -21,7 +23,8 @@ class App extends Component {
           <div className="container">
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/profile" component={Profile} />
+            <Route exact path="/studentprofile" component={StudentProfile} />
+            <Route exact path="/instructorprofile" component={InstructerProfile} />
             <Route exact path="/course/add" component={AddCourse} />
             <Route exact path="/course/list" component={ListCourse} />
             <Route exact path="/edit/:id" component={EditCourse} />
