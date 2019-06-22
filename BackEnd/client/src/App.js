@@ -9,6 +9,7 @@ import Profile from './components/UserRegistration/Profile'
 import AddCourse from './components/Course/AddCourse'
 import ListCourse from './components/Course/ListCourse'
 import EditCourse from './components/Course/EditCourse'
+import StudentCourseList from './components/Student/StudentCourseList'
 
 class App extends Component {
   render () {
@@ -24,6 +25,7 @@ class App extends Component {
             <Route exact path="/course/add" component={AddCourse} />
             <Route exact path="/course/list" component={ListCourse} />
             <Route exact path="/edit/:id" component={EditCourse} />
+            <Route exact path="/student/courseList" component={StudentCourseList} />
           </div>
         </div>
       </Router>
