@@ -34,12 +34,12 @@ class App extends Component {
             <Route exact path="/instructorprofile" component={InstructerProfile} />
             <Route exact path="/course/add" component={AddCourse} />
             <Route exact path="/course/list" component={ListCourse} />
-            <Route exact path="/edit/:id" component={EditCourse} />
-            <Route exact path="/delete/:id" component={ListCourse} />
+            <Route exact path="/course/edit/:id" component={EditCourse} />
+            <Route exact path="/course/delete/:id" component={ListCourse} />
             <Route exact path="/student/courseList" component={StudentCourseList} />
             <Route exact path="/assignment/list" component={ListAssignment} />
             <Route exact path="/assignment/add" component={AddAssignment} />
-            <Route exact path="/edit/:id" component={EditAssignment} />
+            <Route exact path="/assignment/edit/:id" component={EditAssignment} />
             <Route exact path="/instructor/courseList" component={InstructorCourseList} />
             <Route exact path="/instructor/studentList" component={InstructorStudentList} />
             <Route exact path="/instructor/infoAdd" component={InstructorInfoAdd} />
