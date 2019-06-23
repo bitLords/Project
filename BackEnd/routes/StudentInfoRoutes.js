@@ -56,4 +56,19 @@ router.route('/add').post(function(req, res) {
         });
 })
 
+router.route('/delete/:id').delete(function(req, res) {
+    stInfo.findById(req.params.id, function(err, todo) {
+        if (!todo)
+            res.status(404).send("Data is not found");
+        else     
+
+        todo.remove().then(todo => {
+            res.json('Student Deleted!');
+        })
+            .catch(err => {
+                res.status(400).send("Delete not possible");
+            });
+    });
+});
+
 module.exports = router;

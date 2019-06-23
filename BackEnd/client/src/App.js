@@ -21,6 +21,8 @@ import InstructorInfoView from './components/Instructer/InstructorInfoView'
 import StudentInfoAdd from './components/Student/StudentInfoAdd'
 import StudentInfoView from './components/Student/StudentInfoView'
 import AdminProfile from './components/Admin/AdminProfile'
+import ViewInstructors from './components/Admin/ViewInstructors'
+import ViewStudents from './components/Admin/ViewStudents'
 
 
 class App extends Component {
@@ -50,6 +52,9 @@ class App extends Component {
             <Route exact path="/student/infoAdd" component={StudentInfoAdd} />
             <Route exact path="/student/infoView:id" component={StudentInfoView} />
             <Route exact path="/adminprofile" component={AdminProfile} />
+            <Route exact path="/admin/instructorsView" component={ViewInstructors} />
+            <Route exact path="/admin/studentsView" component={ViewStudents} />
+
 
           </div>
         </div>

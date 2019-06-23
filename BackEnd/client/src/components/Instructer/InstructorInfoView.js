@@ -6,8 +6,7 @@ import axios from 'axios';
 export default class InstructorInfoView extends Component {
 
     constructor(props) {
-        super(props);
-        
+        super(props);        
        
         this.state = {
             ins_ID: '',
@@ -25,7 +24,7 @@ export default class InstructorInfoView extends Component {
 
     //To get data From BE
     componentDidMount() {
-        axios.get('http://localhost:5000/instructorInfo/'+this.props.match.params.id)
+        axios.get('http://localhost:5000/instructorInfo/'+this.props.match.params.ins_id)
             .then(response => {
                 this.setState({                 
                     
