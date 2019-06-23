@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import jwt_decode from 'jwt-decode'
 import { login } from './UserFunctions'
 
 class Login extends Component {
@@ -83,14 +84,6 @@ class Login extends Component {
                                     value={this.state.password}
                                     onChange={this.onChange} />
                             </div>
-                            {/* <div className="form-group"> */}
-
-                            {/* <select value={this.state.type} onChange={this.onChange} className="form-control">
-                                    <option value="Select Type">Select type</option>
-                                    <option value="Student">Student</option>
-                                    <option value="Instructor">Instructor</option>
-                                </select> */}
-                            {/* </div> */}
 
                             <label htmlFor="type">Login as:</label>
                             <div className="form-group">
@@ -114,7 +107,7 @@ class Login extends Component {
                                         checked={this.state.type === 'Instructer'}
                                         onChange={this.onChangeType}
                                     />
-                                    <label className="form-check-label">Instructer</label>
+                                    <label className="form-check-label">Instructor</label>
                                 </div>
                             </div>
 

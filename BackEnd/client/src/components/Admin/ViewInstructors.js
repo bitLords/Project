@@ -18,7 +18,7 @@ const Instructor = props => (
             <Link to={"/instructorInfo/edit/"+props.instructor._id} className="btn btn-primary disabled" >Edit</Link>
         </td>
         <td>
-            <Link  className="btn btn-danger" onClick={ViewInstructors.deleteInstructor}>Delete</Link>
+            <Link  className="btn btn-danger disabled" onClick={ViewInstructors.deleteInstructor}>Delete</Link>
         </td>
     </tr>
 )
