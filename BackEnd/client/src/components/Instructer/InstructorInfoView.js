@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
-export default class ListCourse extends Component {
+export default class InstructorInfoView extends Component {
 
     constructor(props) {
         super(props);

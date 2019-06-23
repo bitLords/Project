@@ -18,6 +18,8 @@ import InstructorCourseList from './components/Instructer/InstructorCourseList'
 import InstructorStudentList from './components/Instructer/InstructorStudentList'
 import InstructorInfoAdd from './components/Instructer/InstructorInfoAdd'
 import InstructorInfoView from './components/Instructer/InstructorInfoView'
+import StudentInfoAdd from './components/Student/StudentInfoAdd'
+import StudentInfoView from './components/Student/StudentInfoView'
 
 
 class App extends Component {
@@ -44,6 +46,8 @@ class App extends Component {
             <Route exact path="/instructor/studentList" component={InstructorStudentList} />
             <Route exact path="/instructor/infoAdd" component={InstructorInfoAdd} />
             <Route exact path="/instructor/infoView:id" component={InstructorInfoView} />
+            <Route exact path="/student/infoAdd" component={StudentInfoAdd} />
+            <Route exact path="/student/infoView:id" component={StudentInfoView} />
 
           </div>
         </div>
