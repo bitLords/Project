@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 var nodemailer = require('nodemailer');
 
-transporter = nodemailer.createTransport({
+{/*transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: 'senali1996wijesekera@gmail.com',
@@ -23,7 +23,7 @@ transporter = nodemailer.createTransport({
     } else {
       console.log('Email sent: ' + info.response);
     }
-  });
+  });*/}
 
 export default class InstructorAdd extends Component {
 
