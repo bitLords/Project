@@ -22,6 +22,7 @@ import StudentInfoAdd from './components/Student/StudentInfoAdd'
 import StudentInfoView from './components/Student/StudentInfoView'
 import ViewInstructors from './components/Admin/ViewInstructors'
 import ViewStudents from './components/Admin/ViewStudents'
+import InstructorAdd from './components/Admin/InstructorAdd'
 
 class App extends Component {
   render () {
@@ -51,6 +52,7 @@ class App extends Component {
             <Route exact path="/student/infoView:id" component={StudentInfoView} />
             <Route exact path="/admin/instructorsView" component={ViewInstructors} />
             <Route exact path="/admin/studentsView" component={ViewStudents} />
+            <Route exact path="/admin/instructorAdd" component={InstructorAdd} />
 
           </div>
         </div>
