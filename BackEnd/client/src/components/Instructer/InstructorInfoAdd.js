@@ -111,6 +111,10 @@ export default class InstructorInfoAdd extends Component {
 
         axios.post('http://localhost:5000/instructorInfo/add', newInfo)
             .then(res => console.log(res.data));
+
+        window.location.assign("http://localhost:3000/instructor/infoView"+this.props.match.params.ins_ID);
+
+        {/*this.props.target('/instructorInfo/infoView/'+this.props.match.params.ins_ID);*/}
         
         this.setState({
             ins_ID: '',
@@ -222,7 +226,7 @@ export default class InstructorInfoAdd extends Component {
                     </div> 
                     <div className="form-group"> 
                         <input type="submit" value="Add Info" className="btn btn-primary" /> &nbsp;                    
-                        <Link to={"/instructor/infoView"+this.state.ins_ID} className="btn btn-info" >View Profile</Link>
+                      {/*  <Link to={"/instructor/infoView"+this.state.ins_ID} className="btn btn-info" >View Profile</Link>*/}
                     </div>        
                     
                    
