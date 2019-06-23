@@ -47,7 +47,7 @@ class InstructerProfile extends Component {
         <div className="card-body text-left">
             <h4 className="card-title" style={{ color: "white" }}> Courses</h4>
             <p className="card-text" style={{ color: "white" }}>You can View Available Courses and details from here.</p>
-            <Link to="/instructor/courseList" className="btn btn-primary">
+            <Link to="/course/list" className="btn btn-primary">
                 View Course
             </Link>
         </div>

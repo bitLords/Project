@@ -59,6 +59,7 @@ class Navbar extends Component {
                     <ul className="navbar-nav ">
                         <li className="nav-item ">
                             <Link to="/" className="btn btn-info btn-outline-info">
+                            <i class='fas fa-home'></i> &nbsp;  
                                 LMS Application
                             </Link>
                         </li>
