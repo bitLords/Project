@@ -16,6 +16,8 @@ import EditAssignment from './components/Assignments/EditAssignment'
 import AddAssignment from './components/Assignments/AddAssignment'
 import InstructorCourseList from './components/Instructer/InstructorCourseList'
 import InstructorStudentList from './components/Instructer/InstructorStudentList'
+import InstructorInfoAdd from './components/Instructer/InstructorInfoAdd'
+import InstructorInfoView from './components/Instructer/InstructorInfoView'
 
 
 class App extends Component {
@@ -40,6 +42,8 @@ class App extends Component {
             <Route exact path="/edit/:id" component={EditAssignment} />
             <Route exact path="/instructor/courseList" component={InstructorCourseList} />
             <Route exact path="/instructor/studentList" component={InstructorStudentList} />
+            <Route exact path="/instructor/infoAdd" component={InstructorInfoAdd} />
+            <Route exact path="/instructor/infoView:id" component={InstructorInfoView} />
 
           </div>
         </div>
