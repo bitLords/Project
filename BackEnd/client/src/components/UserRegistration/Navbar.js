@@ -13,13 +13,13 @@ class Navbar extends Component {
             <ul className="navbar-nav">
                 <li className="nav-item">
                     <Link to="/login" className="nav-link" className="btn btn-success btn-outline-success" style={{ marginRight: 30 }}>
-                     <i class='fas fa-sign-in-alt'></i>
+                     <i class='fas fa-sign-in-alt'></i> &nbsp; 
                         Login
                     </Link>
                 </li>
                 <li className="nav-item">
                     <Link to="/register" className="nav-link" className="btn btn-success btn-outline-success" style={{ marginRight: 10 }}>
-                    <i class='fas fa-address-book'></i>
+                    <i class='fas fa-address-book'></i> &nbsp; 
                         Register
                     </Link>
                 </li>
@@ -30,13 +30,13 @@ class Navbar extends Component {
             <ul className="navbar-nav navbar-pills">
                 <li className="nav-item">
                     <Link to="/instructorprofile" className="btn btn-success btn-outline-success" style={{ marginRight: 30 }}>
-                      <i class='fas fa-user	'></i>
+                      <i class='fas fa-user'></i> &nbsp; 
                         User
                     </Link>
                 </li>
                 <li className="nav-item justify-content-md-right" >
                     <a href="" onClick={this.logOut.bind(this)} className="nav-link" className="btn btn-danger btn-outline-danger" style={{ marginRight: 10 }}>
-                    <i class='fas fa-sign-out-alt'></i> 
+                    <i class='fas fa-sign-out-alt'></i>  &nbsp; 
                         Logout
                     </a>
                 </li>

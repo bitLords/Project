@@ -47,13 +47,13 @@ class Login extends Component {
                     this.props.history.push('/adminprofile')
                 }
             }
-            else if(user.type === "Student") {
+            else if (user.type === "Student") {
                 if (res) {
                     this.props.history.push('/studentprofile')
                 }
             }
-            else{
-                console.log("Select login type!")
+            else if (user.stuNumber === " " && user.password === " ") {
+                console.log("error")
             }
 
         })
@@ -62,59 +62,66 @@ class Login extends Component {
     render() {
         return (
             <div className="container">
-                <div className="row">
-                    <div className="col-md-6 mt-5 mx-auto">
-                        <form noValidate onSubmit={this.onSubmit}>
-                            <h1 className="h3 mb-3 font-weight-normal">Login</h1>
-                            <div className="form-group">
-                                <label htmlFor="stuNumber">Student Number</label>
-                                <input type="text"
-                                    className="form-control"
-                                    name="stuNumber"
-                                    placeholder="Enter Student Number"
-                                    value={this.state.stuNumber}
-                                    onChange={this.onChange} />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="password">Password</label>
-                                <input type="password"
-                                    className="form-control"
-                                    name="password"
-                                    placeholder="Enter Password"
-                                    value={this.state.password}
-                                    onChange={this.onChange} />
-                            </div>
+                <div className="jumbotron mt-5">
+                    <div className="">
+                        <div className="row">
+                            <div className="col-md-6  mx-auto">
+                                <form noValidate onSubmit={this.onSubmit}>
+                                    <h1 className="h3 md-6 font-weight-high" style={{ marginBottom: 20 }}>Login</h1>
+                                    <div className="form-group">
+                                        <label htmlFor="stuNumber">Identification Number</label>
+                                        <input type="text"
+                                            className="form-control"
+                                            name="stuNumber"
+                                            placeholder="Enter Identification Number"
+                                            value={this.state.stuNumber}
+                                            onChange={this.onChange}
+                                            required />
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="password">Password</label>
+                                        <input type="password"
+                                            className="form-control"
+                                            name="password"
+                                            placeholder="Enter Password"
+                                            value={this.state.password}
+                                            onChange={this.onChange}
+                                            required />
+                                    </div>
 
-                            <label htmlFor="type">Login as:</label>
-                            <div className="form-group">
-                                <div className="form-check form-check-inline">
-                                    <input className="form-check-input"
-                                        type="radio"
-                                        name="priorityOptions"
-                                        id="priorityLow"
-                                        value="Student"
-                                        checked={this.state.type === 'Student'}
-                                        onChange={this.onChangeType}
-                                    />
-                                    <label className="form-check-label">Student</label>
-                                </div>
-                                <div className="form-check form-check-inline">
-                                    <input className="form-check-input"
-                                        type="radio"
-                                        name="priorityOptions"
-                                        id="priorityMedium"
-                                        value="Instructer"
-                                        checked={this.state.type === 'Instructer'}
-                                        onChange={this.onChangeType}
-                                    />
-                                    <label className="form-check-label">Instructor</label>
-                                </div>
-                            </div>
+                                    <label htmlFor="type">Login as:</label>
+                                    <div className="form-group">
+                                        <div className="form-check form-check-inline">
+                                            <input className="form-check-input"
+                                                type="radio"
+                                                name="priorityOptions"
+                                                id="priorityLow"
+                                                value="Student"
+                                                checked={this.state.type === 'Student'}
+                                                onChange={this.onChangeType}
+                                            />
+                                            <label className="form-check-label">Student</label>
+                                        </div>
+                                        <div className="form-check form-check-inline">
+                                            <input className="form-check-input"
+                                                type="radio"
+                                                name="priorityOptions"
+                                                id="priorityMedium"
+                                                value="Instructer"
+                                                checked={this.state.type === 'Instructer'}
+                                                onChange={this.onChangeType}
+                                            />
+                                            <label className="form-check-label">Instructor</label>
+                                        </div>
+                                    </div>
 
-                            <button type="submit" className="btn btn-md btn-success btn-block">
-                                Sign in
-                            </button>
-                        </form>
+                                    <button type="submit" className="btn btn-md btn-success btn-block" >
+                                    <i class='fas fa-check-circle'></i> &nbsp; 
+                                        Sign in
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

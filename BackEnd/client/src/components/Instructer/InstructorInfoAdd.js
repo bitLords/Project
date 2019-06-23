@@ -226,7 +226,6 @@ export default class InstructorInfoAdd extends Component {
                     </div> 
                     <div className="form-group"> 
                         <input type="submit" value="Add Info" className="btn btn-primary" /> &nbsp;                    
-                      {/*  <Link to={"/instructor/infoView"+this.state.ins_ID} className="btn btn-info" >View Profile</Link>*/}
                     </div>        
                     
                    
