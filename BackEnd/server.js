@@ -17,7 +17,7 @@ app.use(
     })
 )
 
-const mongoURI = 'mongodb://localhost:27017/afreactDB'
+const mongoURI = 'mongodb://localhost:27017/LMSprojectDB'
 
 mongoose
     .connect(mongoURI,{useNewUrlParser: true})

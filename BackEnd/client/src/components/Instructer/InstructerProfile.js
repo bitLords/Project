@@ -64,8 +64,8 @@ class InstructerProfile extends Component {
     
     <div className="card bg-dark">
         <div className="card-body text-left">
-            <h4 className="card-title" style={{ color: "white" }}>Assignments</h4>
-            <p className="card-text" style={{ color: "white" }}>You can View distributed assignments  and download student uploads.</p>
+            <h4 className="card-title" style={{ color: "white" }}> Instructor Info</h4>
+            <p className="card-text" style={{ color: "white" }}>You can View your profilr info and Add details from here.</p>
             <Link to="/instructor/infoAdd" className="btn btn-primary">
                    Instructor Info
             </Link>
@@ -73,7 +73,7 @@ class InstructerProfile extends Component {
     </div>
     <div className="card bg-dark">
         <div className="card-body text-left">
-            <h4 className="card-title" style={{ color: "white" }}> Distributions</h4>
+            <h4 className="card-title" style={{ color: "white" }}>Assignments</h4>
             <p className="card-text" style={{ color: "white" }}>You can distribute new assignments from here.</p>
             <Link to="/assignment/list" className="btn btn-primary">
                   Assignments

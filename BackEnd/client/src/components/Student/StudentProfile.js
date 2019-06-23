@@ -62,7 +62,7 @@ class StudentProfile extends Component {
                             <div className="card-body text-left">
                                 <h4 className="card-title" style={{ color: "white" }}> View Student Info</h4>
                                 <p className="card-text" style={{ color: "white" }}>You can View Student Profile and Add details to update student information.</p>
-                                <Link to="/instructor/infoAdd" className="btn btn-success">
+                                <Link to="/student/infoAdd" className="btn btn-success">
                                     View Student Info
                                 </Link>
                             </div>
@@ -72,7 +72,7 @@ class StudentProfile extends Component {
                             <div className="card-body text-left">
                                 <h4 className="card-title" style={{ color: "white" }}>Assignments</h4>
                                 <p className="card-text" style={{ color: "white" }}>You can View distributed assignments that are available.</p>
-                                <Link to="/assignment/list" className="btn btn-success">
+                                <Link to="/student/assignmentList" className="btn btn-success">
                                     Assignments
                                 </Link>
                             </div>
@@ -81,7 +81,7 @@ class StudentProfile extends Component {
                             <div className="card-body text-left">
                                 <h4 className="card-title" style={{ color: "white" }}> Submissions</h4>
                                 <p className="card-text" style={{ color: "white" }}>You can upload your completed assignments from here.</p>
-                                <Link to="/assignment/list" className="btn btn-success">
+                                <Link to="/student/assignmentList" className="btn btn-success">
                                     Submissions
                                 </Link>
                             </div>
