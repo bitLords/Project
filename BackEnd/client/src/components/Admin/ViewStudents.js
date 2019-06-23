@@ -19,7 +19,7 @@ const Student = props => (
             <Link to={"/studentInfo/edit/"+props.student._id} className="btn btn-primary disabled" >Edit</Link>
         </td>
         <td>
-            <Link to={"/student/delete/"+props.student._id} className="btn btn-danger" onClick={ViewStudents.deleteStudent}>Delete</Link>
+            <Link  className="btn btn-danger" onClick={ViewStudents.deleteStudent}>Delete</Link>
         </td>
     </tr>
 )

@@ -61,7 +61,7 @@ router.route('/delete/:id').delete(function(req, res) {
             res.status(404).send("Data is not found");
         else     
 
-        todo.delete().then(todo => {
+        todo.remove().then(todo => {
             res.json('Instructor Deleted!');
         })
             .catch(err => {

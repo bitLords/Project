@@ -13,7 +13,7 @@ const Course = props => (
             <Link to={"/course/edit/"+props.course._id} className="btn btn-primary" >Edit</Link>
         </td>
         <td>
-            <Link to={"/course/delete/"+props.course._id} className="btn btn-danger" onClick={ListCourse.deleteCourse}>Delete</Link>
+            <Link  className="btn btn-danger" onClick={ListCourse.deleteCourse}>Delete</Link>
         </td>
     </tr>
 )
