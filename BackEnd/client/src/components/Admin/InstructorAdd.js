@@ -89,8 +89,9 @@ export default class InstructorAdd extends Component {
     render() {
         return (
             <div style={{marginTop: 10}}>
-                <h3>Add New Instructor</h3>
+                <h3>Create New Instructor Account</h3>
                 <form onSubmit={this.onSubmit}>
+    
                     <div className="form-group"> 
                         <label>UserName: </label>
                         <input  type="text"

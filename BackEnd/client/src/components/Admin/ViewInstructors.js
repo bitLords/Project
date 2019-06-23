@@ -85,8 +85,10 @@ export default class ViewInstructors extends Component {
 
     render() {
         return (
-            <div>
-                <h3>Instructor List</h3>
+            <div style={{marginTop: 60}}>
+                <h3>Instructor List
+                <Link to="/admin/instructorAdd" className="btn btn-info" style={{float:"right"}}>Add Instructors</Link>
+                </h3>
                 <table className="table table-striped" style={{ marginTop: 20 }} >
                     <thead>
                     <tr>

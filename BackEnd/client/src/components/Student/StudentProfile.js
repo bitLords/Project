@@ -72,7 +72,7 @@ class StudentProfile extends Component {
                             <div className="card-body text-left">
                                 <h4 className="card-title" style={{ color: "white" }}>Assignments</h4>
                                 <p className="card-text" style={{ color: "white" }}>Some example text some example text. John Doe is an architect and engineer</p>
-                                <Link to="/assignment/list" className="btn btn-success">
+                                <Link to="/student/assignmentList" className="btn btn-success">
                                     Assignments
                                 </Link>
                             </div>
