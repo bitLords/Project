@@ -24,6 +24,7 @@ import AdminProfile from './components/Admin/AdminProfile'
 import ViewInstructors from './components/Admin/ViewInstructors'
 import ViewStudents from './components/Admin/ViewStudents'
 import StudentAssignmentList from './components/Assignments/AssignmentStudentView'
+import InstructorAdd from './components/Admin/InstructorAdd'
 
 
 class App extends Component {
@@ -56,6 +57,7 @@ class App extends Component {
             <Route exact path="/admin/instructorsView" component={ViewInstructors} />
             <Route exact path="/admin/studentsView" component={ViewStudents} />
             <Route exact path="/student/assignmentList" component={StudentAssignmentList} />
+            <Route exact path="/admin/instructorAdd" component={InstructorAdd} />
 
 
           </div>
