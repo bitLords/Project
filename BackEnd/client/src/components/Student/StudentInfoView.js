@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import jwt_decode from 'jwt-decode'
 import axios from 'axios';
 
 
@@ -7,8 +7,6 @@ export default class StudentInfoView extends Component {
 
     constructor(props) {
         super(props);
-        
-       
         this.state = {
             student_ID:'' ,
             student_nic:'' ,
@@ -27,28 +25,23 @@ export default class StudentInfoView extends Component {
 
     //To get data From BE
     componentDidMount() {
-        axios.get('http://localhost:5000/studentInfo/'+this.props.match.params.id)
-            .then(response => {
-                this.setState({             
-                  
+        const token = localStorage.usertoken
+        const decoded = jwt_decode(token)
+        this.setState({
+            student_ID: decoded.student_ID,
+            student_nic: decoded.student_nic,
+            student_name: decoded.student_name,
+            student_age: decoded.student_age,
+            student_address: decoded.student_address,
+            academic_year: decoded.academic_year,
+            specialization: decoded.specialization,
+            faculty: decoded.faculty,
+            student_gpa: decoded.student_gpa,
+            student_contact: decoded.student_contact,
+            student_email: decoded.student_email,
 
-                    student_ID:response.data.student_ID,
-                    student_nic:response.data.student_nic,
-                    student_name:response.data.student_name,
-                    student_age:response.data.student_age ,
-                    student_address:response.data.student_address,   
-                    academic_year: response.data.academic_year,
-                    specialization:response.data.specialization ,
-                    faculty:response.data.faculty,
-                    student_gpa:response.data.student_gpa ,
-                    student_contact: response.data.student_contact,
-                    student_email:response.data.student_email , 
-                })
-            })
-            .catch(function (error) {
-                console.log(error);
-            })
-    }    
+        })
+    }
 
     render() {
         return (

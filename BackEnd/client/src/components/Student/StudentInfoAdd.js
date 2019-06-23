@@ -5,7 +5,20 @@ import { Link } from 'react-router-dom';
 export default class StudentInfoAdd extends Component {
 
     constructor(props) {
-        super(props);
+        super(props)
+        this.state = {                        
+            student_ID:'' ,
+            student_nic:'' ,
+            student_name:'' ,
+            student_age:'' ,
+            student_address: '',   
+            academic_year: '',
+            specialization:'' ,
+            faculty:'',
+            student_gpa:'' ,
+            student_contact: '',
+            student_email:'' 
+        }
 
         this.onChangeID = this.onChangeID.bind(this);
         this.onChangeNic = this.onChangeNic.bind(this);
@@ -22,21 +35,7 @@ export default class StudentInfoAdd extends Component {
 
         this.onSubmit = this.onSubmit.bind(this);
 
-        this.state = {                       
-            
-            student_ID:'' ,
-            student_nic:'' ,
-            student_name:'' ,
-            student_age:'' ,
-            student_address: '',   
-            academic_year: '',
-            specialization:'' ,
-            faculty:'',
-            student_gpa:'' ,
-            student_contact: '',
-            student_email:'' ,  
-           
-        }
+        
     }
 
     onChangeID(e) {
@@ -106,18 +105,20 @@ export default class StudentInfoAdd extends Component {
       
         const newInfo = {
 
-            ins_ID: this.state.ins_ID,
-            ins_nic:this.state.ins_nic ,
-            ins_name:this.state.ins_name ,
-            ins_age:this.state.ins_age ,
-            ins_address: this.state.ins_address,  
-            department: this.state.department,     
-            faculty: this.state.faculty,    
-            ins_contact:this.state.ins_contact,
-            ins_email: this.state.ins_email,
-            ins_tpExt:this.state.ins_tpExt ,           
+            student_ID: this.state.student_ID,
+            student_nic:this.state.student_nic ,
+            student_name:this.state.student_name ,
+            student_age:this.state.student_age ,
+            student_address: this.state.student_address,  
+            academic_year: this.state.academic_year,     
+            specialization: this.state.specialization,    
+            facultyt:this.state.faculty,
+            student_gpa: this.state.student_gpa,
+            student_contact:this.state.student_contact ,           
             
-        };
+        }
+
+        
 
         axios.post('http://localhost:5000/studentInfo/add', newInfo)
             .then(res => console.log(res.data));
@@ -139,15 +140,15 @@ export default class StudentInfoAdd extends Component {
 
     render() {
         return (
-            <div style={{marginTop: 10}}>
+            <div style={{marginTop: 30}}>
                 <h3>Manage Your Profile Data...</h3>
-                <form onSubmit={this.onSubmit}>
+                <form onSubmit={this.onSubmit} style={{marginTop: 15}}>
                     <div className="form-group"> 
                         <label>Student ID: </label>
                         <input  type="text"
                                 className="form-control"
-                                value={this.state.ins_ID}
-                                onChange={this.onChangeInsID}
+                                value={this.state.student_ID}
+                                onChange={this.onChangeID}
                                 />
                     </div>
                     <div className="form-group">
@@ -155,8 +156,8 @@ export default class StudentInfoAdd extends Component {
                         <input 
                                 type="text" 
                                 className="form-control"
-                                value={this.state.ins_nic}
-                                onChange={this.onChangeInsNic}
+                                value={this.state.student_nic}
+                                onChange={this.onChangeNic}
                                 />
                     </div>
                     <div className="form-group">
@@ -164,8 +165,8 @@ export default class StudentInfoAdd extends Component {
                         <input 
                                 type="text" 
                                 className="form-control"
-                                value={this.state.ins_name}
-                                onChange={this.onChangeInsName}
+                                value={this.state.student_name}
+                                onChange={this.onChangeName}
                                 />
                     </div>
                     <div className="form-group">
@@ -173,8 +174,8 @@ export default class StudentInfoAdd extends Component {
                         <input 
                                 type="text" 
                                 className="form-control"
-                                value={this.state.ins_age}
-                                onChange={this.onChangeInsAge}
+                                value={this.state.student_age}
+                                onChange={this.onChangeAge}
                                 />
                     </div>
                     <div className="form-group">
@@ -182,8 +183,8 @@ export default class StudentInfoAdd extends Component {
                         <input 
                                 type="text" 
                                 className="form-control"
-                                value={this.state.ins_address}
-                                onChange={this.onChangeInsAddress}
+                                value={this.state.student_address}
+                                onChange={this.onChangeAddress}
                                 />
                     </div> 
                     <div className="form-group">
@@ -243,7 +244,7 @@ export default class StudentInfoAdd extends Component {
                      
                     <div className="form-group"> 
                         <input type="submit" value="Add Info" className="btn btn-primary" />&nbsp;                       
-                        <Link to={"/student/infoView"+this.state.student_ID} className="btn btn-info" >View Profile</Link>
+                        <Link to={"/student/infoView"} className="btn btn-info" >View Profile</Link>
                     </div>        
                    
                    

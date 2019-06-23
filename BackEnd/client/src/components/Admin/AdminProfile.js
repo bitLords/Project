@@ -25,16 +25,7 @@ class AdminProfile extends Component {
             <div className="container">
                 <br></br>
                 <h2 className="text-left">ADMIN PROFILE</h2>
-                <table className="table ">
-                    <tbody>
-                        <tr>
-                            <td>{this.state.stuNumber}</td>
-                        </tr>
-                        <tr>
-                            <td>{this.state.name}</td>
-                        </tr>
-                    </tbody>
-                </table>
+                
                 <br></br>
                 <br></br>
 
@@ -42,10 +33,10 @@ class AdminProfile extends Component {
                     <Link to="/course/list" className="btn btn-primary">
                         Courses
                     </Link>
-                    <Link to="/instructorprofile" className="btn btn-success">
+                    <Link to="/admin/instructorsView" className="btn btn-success">
                         Instructers
                     </Link>
-                    <Link to="/instructorprofile" className="btn btn-primary">
+                    <Link to="/admin/studentsView" className="btn btn-primary">
                         Students
                     </Link>
                     <Link to="/assignment/list" className="btn btn-success">
