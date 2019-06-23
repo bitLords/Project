@@ -76,7 +76,11 @@ export default class ListCourse extends Component {
     render() {
         return (
             <div>
-                <h3>Course List</h3>
+                 <div style={{marginTop: 20}}>
+                <h3 >Course List</h3>
+                <Link to="/course/add" className="btn btn-info" style={{float:"right"}}>Add Courses</Link>
+                </div>
+
                 <table className="table table-striped" style={{ marginTop: 20 }} >
                     <thead>
                     <tr>

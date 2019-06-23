@@ -12,6 +12,10 @@ const UserSchema = new Schema({
       //  required: 'Name can\'t be empty'
         required: true
     },
+    email:{
+        type: String,
+        required: true
+    },
     password:{
         type: String,
       //  required: 'Password can\'t be empty',

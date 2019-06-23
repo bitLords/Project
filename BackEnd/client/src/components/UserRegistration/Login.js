@@ -7,41 +7,47 @@ class Login extends Component {
         this.state = {
             stuNumber: '',
             password: '',
+            value: ''
         }
         this.onChange = this.onChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
     }
 
-    onChange (e) {
+    onChange(e) {
         this.setState({ [e.target.name]: e.target.value })
     }
 
-    onSubmit (e) {
+    onSubmit(e) {
         e.preventDefault()
+             //       console.log(this.state.value);
+
 
         const user = {
             stuNumber: this.state.stuNumber,
-            password: this.state.password
+            password: this.state.password,
+            value: this.state.value
         }
 
         login(user).then(res => {
-            if(user.stuNumber === "IT1711"){
+            if (user.stuNumber === "IT1711") {
                 if (res) {
                     this.props.history.push('/instructorprofile')
-                    console.log(user.stuNumber);
+                    console.log(this.state.type);
                 }
             }
-            else{
+            else {
                 if (res) {
                     this.props.history.push('/studentprofile')
                     console.log(user.stuNumber);
+                    console.log(this.state.type);
+                    console.log(this.state.password);
                 }
             }
 
         })
     }
 
-    render () {
+    render() {
         return (
             <div className="container">
                 <div className="row">
@@ -65,6 +71,14 @@ class Login extends Component {
                                     placeholder="Enter Password"
                                     value={this.state.password}
                                     onChange={this.onChange} />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="type">Login as:</label>
+                                <select value={this.state.type} onChange={this.onChange} className="form-control">
+                                    <option value="Select Type">Select type</option>
+                                    <option value="Student">Student</option>
+                                    <option value="Instructor">Instructor</option>
+                                </select>
                             </div>
                             <button type="submit" className="btn btn-md btn-success btn-block">
                                 Sign in

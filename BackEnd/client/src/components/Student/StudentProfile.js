@@ -7,7 +7,8 @@ class StudentProfile extends Component {
         super()
         this.state = {
             stuNumber: '',
-            name: ''
+            name: '',
+            email:''
         }
     }
 
@@ -16,7 +17,8 @@ class StudentProfile extends Component {
         const decoded = jwt_decode(token)
         this.setState({
             stuNumber: decoded.stuNumber,
-            name: decoded.name
+            name: decoded.name,
+            email: decoded.email
         })
     }
 
@@ -30,6 +32,10 @@ class StudentProfile extends Component {
                         <tr>
                             <td>Student No </td>
                             <td>{this.state.stuNumber}</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>{this.state.email}</td>
                         </tr>
                         <tr>
                             <td>Name</td>

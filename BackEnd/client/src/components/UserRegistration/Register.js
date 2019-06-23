@@ -7,6 +7,7 @@ class Register extends Component {
         this.state = {
             stuNumber: '',
             name: '',
+            email: '',
             password: '',
         }
         this.onChange = this.onChange.bind(this)
@@ -23,8 +24,10 @@ class Register extends Component {
         const user = {
             stuNumber: this.state.stuNumber,
             name: this.state.name,
+            email: this.state.email,
             password: this.state.password
         }
+        console.log(this.state.email);
 
         register(user).then(res => {
             this.props.history.push('/login')
@@ -48,12 +51,21 @@ class Register extends Component {
                                     onChange={this.onChange} />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="last_name">Name</label>
+                                <label htmlFor="name">Name</label>
                                 <input type="text"
                                     className="form-control"
                                     name="name"
                                     placeholder="Enter Name"
                                     value={this.state.name}
+                                    onChange={this.onChange} />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="email">Email</label>
+                                <input type="text"
+                                    className="form-control"
+                                    name="email"
+                                    placeholder="Enter Email"
+                                    value={this.state.email}
                                     onChange={this.onChange} />
                             </div>
                             <div className="form-group">

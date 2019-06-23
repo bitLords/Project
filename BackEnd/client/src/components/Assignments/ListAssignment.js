@@ -10,7 +10,10 @@ const Assignment = props => (
         <td>{props.assignment.distributed_date}</td>
         <td>{props.assignment.deadline}</td>
         <td>
-            <Link to={"/edit/"+props.assignment._id} className="btn btn-primary" >Edit</Link>
+            <Link to={"/assignment/edit/"+props.assignment._id} className="btn btn-primary" >Edit</Link>
+        </td>
+        <td>
+            <Link to={"/assignment/delete/"+props.assignment._id} className="btn btn-danger" onClick={ListAssignment.deleteAssignment}>Delete</Link>
         </td>
     </tr>
 )
@@ -63,13 +66,12 @@ export default class ListAssignment extends Component {
     render() {
         return (
             <div>
-                <h3 style={{marginTop: 30}}>Assignments</h3>
-
-                <div className="form-group" style={{marginTop: 20}}>
-                    <Link to="/assignment/add" className="btn btn-primary" >Add Assignments</Link>
+                <div style={{marginTop: 20}}>
+                <h3 >Assignments</h3>
+                <Link to="/assignment/add" className="btn btn-info" style={{float:"right"}}>Add Assignments</Link>
                 </div>
-
-                <table className="table table-striped" style={{ marginTop: 20 }} >
+                
+                <table className="table table-striped" style={{ marginTop: 40 }} >
                     <thead>
                     <tr>
                         <th>Code</th>
