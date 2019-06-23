@@ -40,22 +40,52 @@ class InstructerProfile extends Component {
                 <br></br>
                 <br></br>
 
-                <div className="list-group">
-                    <Link to="/instructor/courseList" className="btn btn-primary">
-                        View Course
-                    </Link>
-                    <Link to="/instructor/studentList" className="btn btn-success">
-                        View Student Info
-                    </Link>
-                    <Link to="/instructor/infoAdd" className="btn btn-primary">
-                        Instructer Info
-                    </Link>
-                    <Link to="/assignment/list" className="btn btn-success">
-                        Assignments
-                    </Link>
-                </div>
+                <div className="container" style={{marginLeft: 100}}>
 
-            </div>
+<div className="card-columns">
+    <div className="card bg-dark">
+        <div className="card-body text-left">
+            <h4 className="card-title" style={{ color: "white" }}> Courses</h4>
+            <p className="card-text" style={{ color: "white" }}>You can View Available Courses and details from here.</p>
+            <Link to="/instructor/courseList" className="btn btn-success">
+                View Course
+            </Link>
+        </div>
+    </div>
+    <div className="card bg-dark">
+        <div className="card-body text-left">
+            <h4 className="card-title" style={{ color: "white" }}>Student Info</h4>
+            <p className="card-text" style={{ color: "white" }}>You can View details of current students from here.</p>
+            <Link to="/instructor/studentList" className="btn btn-success">
+                 View Student Info
+            </Link>
+        </div>
+    </div>
+    
+    <div className="card bg-dark">
+        <div className="card-body text-left">
+            <h4 className="card-title" style={{ color: "white" }}>Assignments</h4>
+            <p className="card-text" style={{ color: "white" }}>You can View distributed assignments  and download student uploads.</p>
+            <Link to="/instructor/infoAdd" className="btn btn-success">
+                   Instructor Info
+            </Link>
+        </div>
+    </div>
+    <div className="card bg-dark">
+        <div className="card-body text-left">
+            <h4 className="card-title" style={{ color: "white" }}> Distributions</h4>
+            <p className="card-text" style={{ color: "white" }}>You can distribute new assignments from here.</p>
+            <Link to="/assignment/list" className="btn btn-success">
+                  Assignments
+            </Link>
+        </div>
+    </div>
+
+
+</div>
+</div>
+
+ </div>
         )
     }
 }

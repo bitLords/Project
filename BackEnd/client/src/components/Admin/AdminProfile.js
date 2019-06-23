@@ -37,7 +37,7 @@ class AdminProfile extends Component {
                         <div className="card bg-dark">
                             <div className="card-body text-left">
                                 <h4 className="card-title" style={{ color: "white" }}> Courses</h4>
-                                <p className="card-text" style={{ color: "white" }}>Some example text some example text. John Doe is an architect and engineer</p>
+                                <p className="card-text" style={{ color: "white" }}>You can add, delete and update new courses and existing courses.</p>
                                 <Link to="/course/list" className="btn btn-success">
                                     Courses
                                 </Link>
@@ -46,7 +46,7 @@ class AdminProfile extends Component {
                         <div className="card bg-dark">
                             <div className="card-body text-left">
                                 <h4 className="card-title" style={{ color: "white" }}>Instructors</h4>
-                                <p className="card-text" style={{ color: "white" }}>Some example text some example text. John Doe is an architect and engineer</p>
+                                <p className="card-text" style={{ color: "white" }}>You can view,add,delete instructors and notify instructors by emails.</p>
                                 <Link to="/admin/instructorsView" className="btn btn-success">
                                     Instructors
                                 </Link>
@@ -56,7 +56,7 @@ class AdminProfile extends Component {
                         <div className="card bg-dark">
                             <div className="card-body text-left">
                                 <h4 className="card-title" style={{ color: "white" }}>Students</h4>
-                                <p className="card-text" style={{ color: "white" }}>Some example text some example text. John Doe is an architect and engineer</p>
+                                <p className="card-text" style={{ color: "white" }}>You can view Student details from here allowing to take managerial decisions.</p>
                                 <Link to="/admin/studentsView" className="btn btn-success">
                                 Students
                                 </Link>
@@ -65,7 +65,7 @@ class AdminProfile extends Component {
                         <div className="card bg-dark">
                             <div className="card-body text-left">
                                 <h4 className="card-title" style={{ color: "white" }}> Assignments</h4>
-                                <p className="card-text" style={{ color: "white" }}>Some example text some example text. John Doe is an architect and engineer</p>
+                                <p className="card-text" style={{ color: "white" }}>You can view all the assignments that have been distributed from here.</p>
                                 <Link to="/admin/assignmentList" className="btn btn-success">
                                 Assignments
                                 </Link>
