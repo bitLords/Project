@@ -7,41 +7,52 @@ class Login extends Component {
         this.state = {
             stuNumber: '',
             password: '',
-            value: ''
+            type: ''
         }
         this.onChange = this.onChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
+        this.onChangeType = this.onChangeType.bind(this);
     }
 
     onChange(e) {
         this.setState({ [e.target.name]: e.target.value })
     }
 
+    onChangeType(e) {
+        this.setState({
+            type: e.target.value
+        });
+    }
+
     onSubmit(e) {
         e.preventDefault()
-             //       console.log(this.state.value);
+        console.log(this.state.type);
 
 
         const user = {
             stuNumber: this.state.stuNumber,
             password: this.state.password,
-            value: this.state.value
+            type: this.state.type
         }
 
         login(user).then(res => {
-            if (user.stuNumber === "IT1711") {
+            if (user.type === "Instructer") {
                 if (res) {
                     this.props.history.push('/instructorprofile')
-                    console.log(this.state.type);
                 }
             }
-            else {
+            else if (user.stuNumber === "admin" && user.password === "admin") {
+                if (res) {
+                    this.props.history.push('/adminprofile')
+                }
+            }
+            else if(user.type === "Student") {
                 if (res) {
                     this.props.history.push('/studentprofile')
-                    console.log(user.stuNumber);
-                    console.log(this.state.type);
-                    console.log(this.state.password);
                 }
+            }
+            else{
+                console.log("Select login type!")
             }
 
         })
@@ -53,7 +64,7 @@ class Login extends Component {
                 <div className="row">
                     <div className="col-md-6 mt-5 mx-auto">
                         <form noValidate onSubmit={this.onSubmit}>
-                            <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
+                            <h1 className="h3 mb-3 font-weight-normal">Login</h1>
                             <div className="form-group">
                                 <label htmlFor="stuNumber">Student Number</label>
                                 <input type="text"
@@ -72,14 +83,41 @@ class Login extends Component {
                                     value={this.state.password}
                                     onChange={this.onChange} />
                             </div>
-                            <div className="form-group">
-                                <label htmlFor="type">Login as:</label>
-                                <select value={this.state.type} onChange={this.onChange} className="form-control">
+                            {/* <div className="form-group"> */}
+
+                            {/* <select value={this.state.type} onChange={this.onChange} className="form-control">
                                     <option value="Select Type">Select type</option>
                                     <option value="Student">Student</option>
                                     <option value="Instructor">Instructor</option>
-                                </select>
+                                </select> */}
+                            {/* </div> */}
+
+                            <label htmlFor="type">Login as:</label>
+                            <div className="form-group">
+                                <div className="form-check form-check-inline">
+                                    <input className="form-check-input"
+                                        type="radio"
+                                        name="priorityOptions"
+                                        id="priorityLow"
+                                        value="Student"
+                                        checked={this.state.type === 'Student'}
+                                        onChange={this.onChangeType}
+                                    />
+                                    <label className="form-check-label">Student</label>
+                                </div>
+                                <div className="form-check form-check-inline">
+                                    <input className="form-check-input"
+                                        type="radio"
+                                        name="priorityOptions"
+                                        id="priorityMedium"
+                                        value="Instructer"
+                                        checked={this.state.type === 'Instructer'}
+                                        onChange={this.onChangeType}
+                                    />
+                                    <label className="form-check-label">Instructer</label>
+                                </div>
                             </div>
+
                             <button type="submit" className="btn btn-md btn-success btn-block">
                                 Sign in
                             </button>

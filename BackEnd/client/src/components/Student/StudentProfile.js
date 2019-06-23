@@ -8,11 +8,11 @@ class StudentProfile extends Component {
         this.state = {
             stuNumber: '',
             name: '',
-            email:''
+            email: ''
         }
     }
 
-    componentDidMount () {
+    componentDidMount() {
         const token = localStorage.usertoken
         const decoded = jwt_decode(token)
         this.setState({
@@ -22,7 +22,7 @@ class StudentProfile extends Component {
         })
     }
 
-    render () {
+    render() {
         return (
             <div className="container">
                 <br></br>
@@ -46,19 +46,53 @@ class StudentProfile extends Component {
                 <br></br>
                 <br></br>
 
-                <div className="list-group">
-                    <Link to="/studentprofile" className="btn btn-primary">
-                        Courses
-                    </Link>
-                    <Link to="/studentprofile" className="btn btn-success">
-                        View Student Info
-                    </Link>
-                    <Link to="/studentprofile" className="btn btn-primary">
-                        Assignments
-                    </Link>
-                </div>
+                <div className="container" style={{marginLeft: 100}}>
 
+                    <div className="card-columns">
+                        <div className="card bg-dark">
+                            <div className="card-body text-left">
+                                <h4 className="card-title" style={{ color: "white" }}> Courses</h4>
+                                <p className="card-text" style={{ color: "white" }}>Some example text some example text. John Doe is an architect and engineer</p>
+                                <Link to="/student/courseList" className="btn btn-success">
+                                    Courses
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="card bg-dark">
+                            <div className="card-body text-left">
+                                <h4 className="card-title" style={{ color: "white" }}> View Student Info</h4>
+                                <p className="card-text" style={{ color: "white" }}>Some example text some example text. John Doe is an architect and engineer</p>
+                                <Link to="/instructor/infoAdd" className="btn btn-success">
+                                    View Student Info
+                                </Link>
+                            </div>
+                        </div>
+                        
+                        <div className="card bg-dark">
+                            <div className="card-body text-left">
+                                <h4 className="card-title" style={{ color: "white" }}>Assignments</h4>
+                                <p className="card-text" style={{ color: "white" }}>Some example text some example text. John Doe is an architect and engineer</p>
+                                <Link to="/assignment/list" className="btn btn-success">
+                                    Assignments
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="card bg-dark">
+                            <div className="card-body text-left">
+                                <h4 className="card-title" style={{ color: "white" }}> Assignments2</h4>
+                                <p className="card-text" style={{ color: "white" }}>Some example text some example text. John Doe is an architect and engineer</p>
+                                <Link to="/assignment/list" className="btn btn-success">
+                                    Assignments2
+                                </Link>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+               
             </div>
+           
         )
     }
 }

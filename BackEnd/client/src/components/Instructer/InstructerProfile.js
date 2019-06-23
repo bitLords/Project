@@ -41,16 +41,16 @@ class InstructerProfile extends Component {
                 <br></br>
 
                 <div className="list-group">
-                    <Link to="/instructorprofile" className="btn btn-primary">
+                    <Link to="/instructor/courseList" className="btn btn-primary">
                         View Course
                     </Link>
-                    <Link to="/instructorprofile" className="btn btn-success">
+                    <Link to="/instructor/studentList" className="btn btn-success">
                         View Student Info
                     </Link>
-                    <Link to="/instructorprofile" className="btn btn-primary">
+                    <Link to="/instructor/infoAdd" className="btn btn-primary">
                         Instructer Info
                     </Link>
-                    <Link to="/instructorprofile" className="btn btn-success">
+                    <Link to="/assignment/list" className="btn btn-success">
                         Assignments
                     </Link>
                 </div>
