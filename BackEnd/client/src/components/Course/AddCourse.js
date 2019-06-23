@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom'
 
 export default class AddCourse extends Component {
 
@@ -134,6 +135,7 @@ export default class AddCourse extends Component {
                     </div>           
                     <div className="form-group">
                         <input type="submit" value="Create Course" className="btn btn-primary" />
+                        <Link to="/course/list" className="btn btn-primary" style={{marginLeft: 80}} >View Courses</Link>
                     </div>
                 </form>
             </div>

@@ -5,6 +5,7 @@ export const register = newUser => {
         .post('users/register', {
             stuNumber: newUser.stuNumber,
             name: newUser.name,
+            email: newUser.email,
             password: newUser.password,
         })
         .then(res => {
